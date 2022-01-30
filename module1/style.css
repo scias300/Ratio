@@ -561,6 +561,31 @@ body {
     border-radius: 50%;
 }
 
+.footer__social-link:hover {
+    background-color: rgba(33, 35, 83, 0.5);
+}
+
+.footer__social-link--fb {
+    background-image: url('img/fb.png');
+    background-repeat: no-repeat;
+    background-size: 10px 20px;
+    background-position: center;
+}
+
+.footer__social-link--tw {
+    background-image: url('img/twitter.png');
+    background-repeat: no-repeat;
+    background-size: 19px 15px;
+    background-position: center;
+}
+
+.footer__social-link--inst {
+    background-image: url('img/inst.png');
+    background-repeat: no-repeat;
+    background-size: 16px 16px;
+    background-position: center;
+}
+
 @media(max-width: 1200px) {
     .container {
         max-width: 90%;
@@ -698,32 +723,169 @@ body {
 }
 
 @media(max-width: 576px) {
+
+    .header__item,
+    .header__item:first-child {
+        margin-right: 20px;
+    }
+
+    .promo {
+        min-height: 600px;
+        padding-top: 300px;
+    }
+
+    .promo__container::after {
+        display: none;
+    }
+
+    .promo__header {
+        font-size: 30px;
+    }
+
+    .promo__header:after {
+        position: absolute;
+        content: '';
+        background-image: url('img/img1.png');
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 100%;
+        background-size: contain;
+        left: 50%;
+        transform: translateX(-50%);
+        top: -250px;
+    }
+
+    .promo__text {
+        width: 100%;
+        margin-top: 20px;
+        font-size: 16px;
+    }
+
+    .promo__link {
+        margin-top: 20px;
+    }
+
+    .about {
+        margin-top: 20px;
+    }
+
+    .about__container::after {
+        width: 80%;
+        height: 100%;
+        background-size: contain;
+        top: -20px;
+    }
+
+    .about__header {
+        font-size: 30px;
+    }
+
+    .about__text {
+        font-size: 16px;
+        margin-top: 20px;
+    }
+
+    .features {
+        margin-top: 20px;
+    }
+
+    .features__text {
+        margin-top: 20px;
+    }
+
     .features__item {
-        padding: 10px 10px 10px 30px;
-        width: 90%;
+        padding: 0 0 0 50%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        min-height: 250px;
+        margin-bottom: 20px;
+    }
+
+    .features__name {
+        font-size: 20px;
+    }
+
+    .features__description {
+        margin-top: 5px;
+        width: 95%;
+        font-size: 15px;
+        line-height: 100%;
+        max-width: 175px;
+    }
+
+    .features__link-wrapper {
+        top: 160px;
     }
 
     .data::after {
-        width: 318px;
-        height: 214px;
-        background-size: cover;
+        width: 100%;
+        height: 100%;
+        background-size: contain;
+        background-position: top;
     }
 
     .access::after {
-        width: 326px;
-        height: 214px;
-        background-size: cover;
+        width: 100%;
+        height: 100%;
+        background-size: contain;
+        background-position: top;
     }
 
     .print::after {
-        width: 318px;
-        height: 214px;
-        background-size: cover;
+        width: 100%;
+        height: 100%;
+        background-size: contain;
+        background-position: top;
     }
 
     .security::after {
-        width: 326px;
-        height: 214px;
-        background-size: cover;
+        width: 100%;
+        height: 100%;
+        background-size: contain;
+        background-position: top;
+    }
+
+    .testimonials__container {
+        padding-top: 50px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .testimonials__list {
+        top: 100px;
+    }
+
+    .testimonials__item,
+    .testimonials__item--active {
+        width: 250px;
+    }
+
+    .testimonials__item--active .testimonials__text,
+    .testimonials__text {
+        width: 100%;
+    }
+
+    .testimonials__buttons {
+        left: 40px;
+    }
+
+    .testimonials__prev {
+        right: 70px;
+    }
+
+    .testimonials__next {
+        right: 30px;
+    }
+
+    .footer__container {
+        flex-direction: column;
+    }
+}
+
+@media(max-width: 450px) {
+    .about__container {
+        padding-top: 300px;
     }
 }
