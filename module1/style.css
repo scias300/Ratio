@@ -11,8 +11,12 @@ html {
 }
 
 body {
+    /* кроме font-family, надо определить общий font-size, font-weight,
+    тогда можно избавиться от повторения font-style: normal, font-weight: normal и font-size: 16px
+  */
     font-family: 'Ubuntu',
         sans-serif;
+    /* все цвета лучше выносить в переменные */
     background: linear-gradient(180deg, #F6FAFD 0%, #FFFFFF 19.4%);
     overflow-x: hidden;
 }
@@ -50,6 +54,7 @@ body {
 }
 
 .header__link:hover {
+    /* Значения пикселей с плавающей точкой могут отображаться по-разному в разных браузерах, лучше округлить */
     text-shadow: 0 0 .65px #212353,
         0 0 .65px #212353;
 }
@@ -168,6 +173,7 @@ body {
 
 .features__text {
     width: 588px;
+    /* лучше использовать сокращенную запись margin: 50px auto 0; */
     margin: 0 auto;
     text-align: center;
     margin-top: 50px;
@@ -347,6 +353,7 @@ body {
     padding: 60px 40px 50px 40px;
     min-height: 330px;
     border: 1px solid #9C69E2;
+    /* если 0px, то просто 0  */
     box-shadow: 0px 20px 0px rgba(68, 37, 110, 0.3);
     border-radius: 20px;
     position: relative;
@@ -359,6 +366,7 @@ body {
 .testimonials__item--active {
     padding: 60px 70px 50px 70px;
     background-color: #FFFFFF;
+    /* если 0px, то просто 0  */
     box-shadow: 0px 20px 0px rgba(68, 37, 110, 0.3);
     border-radius: 20px;
     width: 645px;
@@ -631,6 +639,7 @@ body {
     }
 
     .about__container {
+        /*сокращенная запись  padding: 400px 90px 90px; */
         padding: 90px;
         padding-top: 400px;
     }
